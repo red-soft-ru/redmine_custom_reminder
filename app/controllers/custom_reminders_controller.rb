@@ -1,5 +1,3 @@
-require_relative '../jobs/custom_reminders_job'
-
 class CustomRemindersController < ApplicationController
   layout 'admin'
   before_action :require_admin

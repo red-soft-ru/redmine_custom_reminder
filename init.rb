@@ -1,14 +1,12 @@
-require 'redmine'
-require 'redmine_custom_reminder/hooks'
-require 'redmine_custom_reminder/version'
-
-ActionView::Base.send(:include, RedmineCustomReminder::RenderHelper) unless ActionView::Base.include?(RedmineCustomReminder::RenderHelper)
+require_relative 'lib/redmine_custom_reminder/version'
 
 Redmine::Plugin.register :redmine_custom_reminder do
   name 'Redmine Custom Email Reminder'
   author 'Andrey Lobanov(RedSoft)'
   description 'Sends email notifications by custom conditions'
-  version RedmineCustomReminder::Version.to_s
+  version RedmineCustomReminder::VERSION
+
+  requires_redmine version_or_higher: '5.0'
 
   permission :manage_project_custom_reminders, {}, require: :member
 
