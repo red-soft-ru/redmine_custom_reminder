@@ -16,7 +16,6 @@
         <th><%= l(:field_description) %></th>
         <th><%= l(:field_notification_recipient) %></th>
         <th><%= l(:field_active) %></th>
-        <th><%= l(:label_project_plural) %></th>
         <th></th>
       </tr>
       </thead>
@@ -32,9 +31,6 @@
             <% else %>
               <span class="icon icon-not-ok"></span>
             <% end %>
-          </td>
-          <td class="projects">
-            <%= reminder.projects.map{ |p| link_to(p.name, project_path(p)) }.join(", ").html_safe %>
           </td>
           <td class="buttons">
             <p><%= link_to(l(:button_delete), reminder, :class => 'icon icon-del', :data => {:confirm => l(:text_are_you_sure)}, :confirm => l(:text_are_you_sure), :method => :delete) %></p>
