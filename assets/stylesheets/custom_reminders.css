@@ -29,7 +29,7 @@ table.list.custom-reminders tr.disabled {
     color: silver;
 }
 
-#custom_reminder_enabled_projects ul {
-    max-height: 200px;
+#custom_reminder_enabled_projects ul.root {
+    max-height: 400px;
     overflow-y: auto;
 }
