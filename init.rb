@@ -1,10 +1,8 @@
-require_relative 'lib/redmine_custom_reminder/version'
-
 Redmine::Plugin.register :redmine_custom_reminder do
   name 'Redmine Custom Email Reminder'
   author 'Andrey Lobanov(RedSoft)'
   description 'Sends email notifications by custom conditions'
-  version RedmineCustomReminder::VERSION
+  version RedmineCustomReminder::PluginVersion
 
   requires_redmine version_or_higher: '5.0'
 
